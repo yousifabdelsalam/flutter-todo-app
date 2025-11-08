@@ -2,7 +2,7 @@
 
 ## Description
 A Flutter-based ToDo App that helps users manage their daily tasks efficiently.
-It allows adding, organizing, editing, and deleting tasks while saving all data locally using SQLite.
+It allows adding, and deleting tasks while saving all data locally using SQLite.
 The app features smooth UI, dark/light modes, and smart task filtering (New, Done, Archived).
 Built following clean architecture and Bloc state management for a responsive, scalable experience.
 
@@ -22,17 +22,6 @@ It provides categorized task organization with instant updates and dynamic theme
 ---
 
 ## ✨ Features  
-
-- **Gender toggle** with animated color change  
-- **Height slider** (cm) with real-time value display  
-- **Weight & Age** controls using **+ / –** buttons  
-- **BMI calculation** using the standard formula:  
-  `BMI = weight(kg) / (height(m)²)`  
-- **Result screen** showing BMI value, gender, and age  
-- **Responsive UI** – works on Android & iOS  
-- **Clean architecture** with separation of UI & logic  
-✨ Features
-
 - **🗂️ Add, Delete Tasks** Users can add tasks with title, date, and time, Tasks can be deleted anytime.
 - **🧠 Task Categorization** ability to organize tasks into New, Done, and Archived tabs.
 - **💾 Local Data Storage** Uses **SQLite (sqflite)** for saving tasks permanently on the device.
