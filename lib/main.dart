@@ -4,7 +4,6 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_todo_app/shared/bloc_observer.dart';
 import 'package:my_todo_app/shared/cubit/cubit.dart';
-import 'package:my_todo_app/shared/cubit/states.dart';
 import 'package:my_todo_app/shared/network/local/cache_helper.dart';
 import 'package:my_todo_app/shared/styles/styles.dart';
 import 'package:my_todo_app/todo_Layout_Screen.dart';
@@ -24,7 +23,7 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-bool isDark;
+final bool isDark;
 
 MyApp(this.isDark);
 
