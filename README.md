@@ -25,7 +25,7 @@ It provides categorized task organization with instant updates and dynamic theme
 - **🗂️ Add, Delete Tasks** Users can add tasks with title, date, and time, Tasks can be deleted anytime.
 - **🧠 Task Categorization** ability to organize tasks into New, Done, and Archived tabs.
 - **💾 Local Data Storage** Uses **SQLite (sqflite)** for saving tasks permanently on the device.
-- **🌙 Dark & Light Theme Toggle**
+- **🌙 Dark & Light Theme Toggle** Saves theme preference using **Shared Preferences**.
 - **⚙️ Bloc State Management** Handles all app states efficiently with **Cubit and flutter_bloc**.
 - **📆 Date & Time Picker Integration** Adds intuitive date/time scheduling with the **intl package**.
 - **🧩 Clean, Responsive UI** Adaptive design that fits both Android & iOS screens perfectly.
@@ -51,7 +51,7 @@ It provides categorized task organization with instant updates and dynamic theme
 **🎯 What I Learned**
 - **Using SQLite database to perform CRUD operations (Create, Read, Update, Delete)**.
 - **Applying Bloc/Cubit to manage states effectively without rebuilding unnecessary widgets.**
-- **user preferences (like dark mode).**
+- **Persisting user preferences (like dark mode) using Shared Preferences.**
 - **Organizing code with Clean Architecture and Separation of Concerns.**
 - **Designing an intuitive, minimal, and responsive ToDo interface.**
 
