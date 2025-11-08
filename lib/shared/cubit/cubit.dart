@@ -7,6 +7,7 @@ import 'package:sqflite/sqflite.dart';
 import '../../todo_app/archived_tasks/Archived_Tasks_Screen.dart';
 import '../../todo_app/done_tasks/Done_Tasks_Screen.dart';
 import '../../todo_app/new_tasks/New_Tasks_Screen.dart';
+import '../network/local/cache_helper.dart';
 
 
 class AppCubit extends Cubit<AppStates> {
@@ -16,10 +17,17 @@ class AppCubit extends Cubit<AppStates> {
 
   bool darkTheme = false;
   bool floatingButton = false;
-  bool isDark = false;
 
 
   int currentIndex = 0;
+
+  void changeTheme(){
+    darkTheme = !darkTheme;
+    cacheHelper.setBoolean(key: 'isDark', value: darkTheme);
+    emit(AppChangeThemeState());
+  }
+
+
 
   List<Widget> Screens = [
     NewTasksScreen(),
@@ -91,7 +99,7 @@ class AppCubit extends Cubit<AppStates> {
               });
         })
         .then((value) {
-          //    emit(AppInsertDatabaseState());
+
         });
   }
 
@@ -101,7 +109,6 @@ class AppCubit extends Cubit<AppStates> {
 }){
     database?.rawUpdate('UPDATE tasks SET status = ? WHERE id = ?', ['$status', id]).then((value){
       getDataFromDatabase(database);
-   //   emit(AppUpdateDatabaseState());
     });
     emit(AppUpdateDatabaseState());
 }
@@ -134,16 +141,8 @@ class AppCubit extends Cubit<AppStates> {
        emit(AppGetDatabaseState());
      });
   }
-  //
-  // void changeMode(){
-  //   isDark = !isDark;
-  //   emit(NewsThemeState());
-  // }
 
 
 
-  void changeTheme(){
-    darkTheme = !darkTheme;
-    emit(AppChangeThemeState());
-  }
+
 }

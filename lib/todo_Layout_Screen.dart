@@ -6,6 +6,7 @@ import '../shared/cubit/cubit.dart';
 import '../shared/cubit/states.dart';
 
 class Home_Layout_Screen extends StatelessWidget {
+
   var scaffoldkey = GlobalKey<ScaffoldState>();
   var titleController = TextEditingController();
   var timeController = TextEditingController();
@@ -13,14 +14,12 @@ class Home_Layout_Screen extends StatelessWidget {
   var formkey = GlobalKey<FormState>();
   var done = GlobalKey<ScaffoldState>();
   var arch = GlobalKey<ScaffoldState>();
+
   int secret = 21;
   bool showFlotButn = true;
   @override
   Widget build(BuildContext context) {
-    return  BlocProvider(
-      create: (BuildContext context) => AppCubit()..createDatabase(),
-       child:
-       BlocConsumer<AppCubit, AppStates>(
+    return BlocConsumer<AppCubit, AppStates>(
           builder: (BuildContext context, AppStates state) {
             AppCubit cubit = AppCubit.get(context);
             return Scaffold(
@@ -264,11 +263,8 @@ class Home_Layout_Screen extends StatelessWidget {
           },
           listener: (BuildContext context, AppStates state) {},
 
-      ),
-    );
+      );
+
   }
 
-  Future<dynamic> getName() async {
-    return 'Yousif Abd-Elsalam';
-  }
 }
