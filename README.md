@@ -1,4 +1,4 @@
-# [bmi_calculator] - Flutter Mobile App
+# [TODO_APP] - Flutter Mobile App
 
 ## Description
 A Flutter-based ToDo App that helps users manage their daily tasks efficiently.
